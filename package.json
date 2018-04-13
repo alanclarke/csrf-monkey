@@ -23,10 +23,22 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^3.0.0",
     "mocha": "^5.1.0",
+    "istanbul": "^0.4.5",
+    "karma-firefox-launcher": "^1.1.0",
     "standard": "^11.0.1",
     "webpack": "^4.5.0"
   },
-  "dependencies": {
-    "istanbul": "^0.4.5"
-  }
+  "dependencies": {},
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanclarke/csrf-monkey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanclarke/csrf-monkey/issues"
+  },
+  "homepage": "https://github.com/alanclarke/csrf-monkey#readme"
 }

@@ -31,7 +31,7 @@ module.exports = function (config) {
         })
       }]
     },
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
     reporters: [ 'progress', 'coverage-istanbul', 'coverage' ],
     coverageIstanbulReporter: {
       reports: [ 'text-summary' ],
