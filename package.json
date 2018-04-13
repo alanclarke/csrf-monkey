@@ -1,6 +1,6 @@
 {
   "name": "csrf-monkey",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Monkeypatch xhr and fetch to automatically add csrf tokens to clientside requests",
   "main": "index.js",
   "scripts": {
@@ -41,5 +41,10 @@
     "url": "https://github.com/alanclarke/csrf-monkey/issues"
   },
   "homepage": "https://github.com/alanclarke/csrf-monkey#readme",
-  "keywords": ["csrf", "csfr", "xhr", "fetch"]
+  "keywords": [
+    "csrf",
+    "csfr",
+    "xhr",
+    "fetch"
+  ]
 }
