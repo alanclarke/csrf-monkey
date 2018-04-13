@@ -8,6 +8,7 @@ Clientside csrf made simple
 - configurable, testable and restorable
 - handles both xhr and fetch
 - 100% test coverage
+- small footprint, no dependencies
 
 ## Installation
 ```js

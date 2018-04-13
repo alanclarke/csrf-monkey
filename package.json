@@ -1,0 +1,32 @@
+{
+  "name": "csrf-monkey",
+  "version": "1.0.0",
+  "description": "Monkeypatch xhr and fetch to automatically add csrf tokens to clientside requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && karma start --single-run"
+  },
+  "author": "Alan Clarke <hi@alz.io> (alz.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "expect.js": "^0.3.1",
+    "inject-loader": "^4.0.1",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-coverage-istanbul-reporter": "^1.4.2",
+    "karma-express-server": "^0.1.4",
+    "karma-mocha": "^1.3.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.0",
+    "mocha": "^5.1.0",
+    "standard": "^11.0.1",
+    "webpack": "^4.5.0"
+  },
+  "dependencies": {
+    "istanbul": "^0.4.5"
+  }
+}
