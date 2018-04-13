@@ -1,6 +1,6 @@
 {
   "name": "csrf-monkey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Monkeypatch xhr and fetch to automatically add csrf tokens to clientside requests",
   "main": "index.js",
   "scripts": {
