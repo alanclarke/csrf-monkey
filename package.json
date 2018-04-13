@@ -40,5 +40,6 @@
   "bugs": {
     "url": "https://github.com/alanclarke/csrf-monkey/issues"
   },
-  "homepage": "https://github.com/alanclarke/csrf-monkey#readme"
+  "homepage": "https://github.com/alanclarke/csrf-monkey#readme",
+  "keywords": ["csrf", "csfr", "xhr", "fetch"]
 }
