@@ -1,4 +1,4 @@
-/* globals describe beforeEach afterEach it fetch */
+/* globals describe beforeEach afterEach it fetch Request */
 var patchLoader = require('inject-loader!../lib/fetch') // eslint-disable-line
 var expect = require('expect.js')
 
@@ -24,6 +24,16 @@ describe('fetch', function () {
     it('should add the token to the header', function () {
       restore = patch('header', 'token')
       return fetch('http://localhost:9877/api/headers')
+        .then(response => response.json())
+        .then(function (resp) {
+          expect(resp.header).to.eql('token')
+        })
+    })
+
+    it('should work with Request object', function () {
+      restore = patch('header', 'token')
+      var req = new Request('http://localhost:9877/api/headers')
+      return fetch(req)
         .then(response => response.json())
         .then(function (resp) {
           expect(resp.header).to.eql('token')
