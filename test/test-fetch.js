@@ -86,6 +86,16 @@ describe('fetch', function () {
           expect(resp.header).to.eql(void 0)
         })
     })
+
+    it('should not add the token to the header with Request object', function () {
+      restore = patch('header', 'token')
+      var req = new Request('http://localhost:9877/api/headers')
+      return fetch(req)
+        .then(response => response.json())
+        .then(function (resp) {
+          expect(resp.header).to.eql(void 0)
+        })
+    })
   })
 
   describe('when window.fetch does not exist', function () {
