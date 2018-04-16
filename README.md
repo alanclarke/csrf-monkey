@@ -3,12 +3,12 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 # csrf-monkey
-Clientside csrf made simple
+Automatically add CSRF headers to all clientside requests
 
-- configurable, testable and restorable
 - handles both xhr and fetch
-- 100% test coverage
 - small footprint, no dependencies
+- configurable, testable and restorable
+- 100% test coverage
 
 ## Installation
 ```js
@@ -30,23 +30,20 @@ Put your csrf token in a meta tag in your head like so:
 </html>
 ```
 
-Then call `csrf-monkey` to patch xhr and window.fetch to automatically include the csrf token in all requests
+Then call `csrf-monkey`. This will patch xhr and window.fetch so that your csrf token is automatically included in all clientside requests
 
 ```js
 var axios = require('axios')
-var csrfMonkey = require('csrf-monkey')
-csrfMonkey()
-
+require('csrf-monkey')()
 
 fetch('/api') // request will include csrf header ('x-csrf-token': value)
 axios.get('/api') // request will include csrf header ('x-csrf-token': value)
 ```
 
-
 ## Options
-
 ```js
-// csrfMonkey(header, token)
+var csrfMonkey = require('csrf-monkey')
+csrfMonkey(header, token)
 
 // you can also pass a custom header to csrf-monkey:
 csrfMonkey('my-custom-csrf-header')

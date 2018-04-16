@@ -1,7 +1,7 @@
 {
   "name": "csrf-monkey",
   "version": "1.0.3",
-  "description": "Monkeypatch xhr and fetch to automatically add csrf tokens to clientside requests",
+  "description": "Automatically add CSRF headers to all clientside requests",
   "main": "index.js",
   "scripts": {
     "test": "standard && karma start --single-run"
@@ -45,6 +45,7 @@
     "csrf",
     "csfr",
     "xhr",
-    "fetch"
+    "fetch",
+    "monkey"
   ]
 }
