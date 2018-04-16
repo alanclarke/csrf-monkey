@@ -49,7 +49,7 @@ csrfMonkey(header, token)
 csrfMonkey('my-custom-csrf-header')
 
 // and you can pass your csrf token value directly to csrf-monkey if you don't want to include it as a meta tag:
-csrfMonkey('my-custom-csrf-header', 'my-csrf-token')
+csrfMonkey(null, 'my-csrf-token')
 
 ```
 
