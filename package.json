@@ -1,6 +1,6 @@
 {
   "name": "csrf-monkey",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Automatically add CSRF headers to all clientside requests",
   "main": "index.js",
   "scripts": {
