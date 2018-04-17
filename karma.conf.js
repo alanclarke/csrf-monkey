@@ -32,7 +32,11 @@ module.exports = function (config) {
       }]
     },
     browsers: ['Firefox'],
-    reporters: [ 'progress', 'coverage-istanbul', 'coverage' ],
+    reporters: [ 'progress', 'coverage-istanbul', 'coverage', 'coveralls' ],
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    },
     coverageIstanbulReporter: {
       reports: [ 'text-summary' ],
       fixWebpackSourcePaths: true
