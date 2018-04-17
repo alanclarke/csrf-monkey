@@ -1,6 +1,7 @@
 [![Travis CI](https://travis-ci.org/alanclarke/csrf-monkey.svg?branch=master)](https://travis-ci.org/alanclarke/csrf-monkey)
 [![devDependency Status](https://david-dm.org/alanclarke/csrf-monkey/dev-status.svg)](https://david-dm.org/alanclarke/csrf-monkey#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Coverage Status](https://coveralls.io/repos/github/alanclarke/csrf-monkey/badge.svg?branch=master)](https://coveralls.io/github/alanclarke/csrf-monkey?branch=master)
 
 # csrf-monkey
 Automatically add CSRF headers to all clientside requests
