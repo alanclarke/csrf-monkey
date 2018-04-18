@@ -3,7 +3,7 @@ var patchLoader = require('inject-loader!../lib/xhr') // eslint-disable-line
 var axios = require('axios')
 var expect = require('expect.js')
 
-describe('xhr', function () {
+describe.skip('xhr', function () {
   var patch, restore, meta
 
   describe('when url is local', function () {

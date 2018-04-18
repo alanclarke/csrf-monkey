@@ -2,7 +2,7 @@
 var patchLoader = require('inject-loader!../lib/fetch') // eslint-disable-line
 var expect = require('expect.js')
 
-describe('fetch', function () {
+describe.skip('fetch', function () {
   var patch, restore, meta
 
   describe('when url is local', function () {

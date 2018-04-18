@@ -5,7 +5,7 @@ var xhrPatchLoader = require('inject-loader!../lib/xhr') // eslint-disable-line
 var axios = require('axios')
 var expect = require('expect.js')
 
-describe('csrf-monkey', function () {
+describe.skip('csrf-monkey', function () {
   var patch, restore, meta
 
   beforeEach(function () {
