@@ -2,7 +2,7 @@
 var isLocal = require('../lib/isLocal')
 var expect = require('expect.js')
 
-describe('is local', function () {
+describe.skip('is local', function () {
   it('should return true when local', function () {
     expect(isLocal('./some/local/path')).to.eql(true)
     expect(isLocal('/some/local/path')).to.eql(true)
