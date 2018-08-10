@@ -6,7 +6,7 @@
   "scripts": {
     "test": "standard && karma start --single-run"
   },
-  "author": "Alan Clarke <hi@alz.io> (alz.io)",
+  "author": "Alan Clarke <code@alz.io> (alz.io)",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.18.0",
