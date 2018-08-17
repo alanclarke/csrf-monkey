@@ -1,27 +1,23 @@
 const cors = require('cors')
+const path = require('path')
 
 module.exports = function (config) {
   config.set({
-    frameworks: ['mocha', 'expressServer'],
-    files: [ 'test/**/test-*' ],
-    preprocessors: { 'test/**/test-*': ['webpack', 'sourcemap'] },
-    webpack: {
-      watch: true,
-      devtool: 'inline-source-map',
-      mode: 'development',
-      module: {
-        rules: [{
-          test: /\.js$/,
-          use: {
-            loader: 'istanbul-instrumenter-loader'
-          },
-          exclude: /(test|node_modules|bower_components)\//
-        }]
-      }
+    frameworks: [ 'mocha', 'expressServer' ],
+    files: [ 'test/test-*' ],
+    preprocessors: {
+      '/**/*.js': [ 'webpack', 'sourcemap' ]
     },
-    webpackMiddleware: {
-      stats: 'errors-only',
-      logLevel: 'silent'
+    webpack: {
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            use: { loader: 'istanbul-instrumenter-loader' },
+            include: path.resolve('lib/')
+          }
+        ]
+      }
     },
     expressServer: {
       extensions: [function (app, log) {
@@ -31,15 +27,13 @@ module.exports = function (config) {
         })
       }]
     },
-    browsers: ['Firefox'],
-    reporters: [ 'progress', 'coverage-istanbul', 'coverage', 'coveralls' ],
+    webpackMiddleware: { stats: 'errors-only', logLevel: 'error' },
+    browsers: [ 'Firefox' ],
+    reporters: [ 'progress', 'coverage', 'coveralls' ],
     coverageReporter: {
       type: 'lcov',
-      dir: 'coverage/'
-    },
-    coverageIstanbulReporter: {
-      reports: [ 'text-summary' ],
-      fixWebpackSourcePaths: true
+      dir: 'coverage/',
+      reporters: [ { type: 'html' }, { type: 'text-summary' } ]
     }
   })
 }
